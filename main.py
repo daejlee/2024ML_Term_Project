@@ -72,7 +72,7 @@ def RSLDA(
     dim=100,  # 축소할 차원 수
     mu=0.1,  # ADMM 알고리즘 업데이트 파라미터 (μ)
     rho=1.01,  # "
-    max_iter=50,  # 최대 반복 횟수 (기존 100에서 50으로 감소)
+    max_iter=100,  # 최대 반복 횟수
 ):
     print("RUNNING RSLDA!")
     m, n = X.shape  # 입력 데이터 행렬 행과 열의 수

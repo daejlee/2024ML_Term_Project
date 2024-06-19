@@ -16,9 +16,6 @@ def RSLDA(
     logger=None,
 ):
     print("RUNNING RSLDA (Serial)!")
-    logger.info(
-        f"Testing with params: lambda1={lambda1}, lambda2={lambda2}, dim={dim}, mu={mu}, rho={rho}"
-    )
     m, n = X.shape  # 입력 데이터 행렬 행과 열의 수
     max_mu = 10**5  # μ의 최대값.
 

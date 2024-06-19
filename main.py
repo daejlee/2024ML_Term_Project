@@ -3,7 +3,6 @@ import random
 import sys
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import KFold
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 from Preprocess import load_and_preprocess_data
 from RSLDA import RSLDA
@@ -75,51 +74,45 @@ def main():
 
     kf = KFold(n_splits=5, shuffle=True, random_state=42)  # 5-겹 교차검증
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = []
-        param_list = []
+    param_list = []
 
-        for _ in range(param_combinations):
-            lambda1 = random.choice(lambda1_values)
-            lambda2 = random.choice(lambda2_values)
-            dim = random.choice(dim_values)
-            mu = random.choice(mu_values)
-            rho = random.choice(rho_values)
+    for _ in range(param_combinations):
+        lambda1 = random.choice(lambda1_values)
+        lambda2 = random.choice(lambda2_values)
+        dim = random.choice(dim_values)
+        mu = random.choice(mu_values)
+        rho = random.choice(rho_values)
 
-            param_list.append((lambda1, lambda2, dim, mu, rho))
+        param_list.append((lambda1, lambda2, dim, mu, rho))
 
-        for params in param_list:
-            lambda1, lambda2, dim, mu, rho = params
+    for params in param_list:
+        lambda1, lambda2, dim, mu, rho = params
 
-            futures.append(
-                executor.submit(
-                    cross_validate, X, y, lambda1, lambda2, dim, mu, rho, kf, logger
-                )
+        logger.info(
+            f"Testing with params: lambda1={lambda1}, lambda2={lambda2}, dim={dim}, mu={mu}, rho={rho}"
+        )
+
+        mean_accuracy = cross_validate(X, y, lambda1, lambda2, dim, mu, rho, kf, logger)
+        logger.info(f"Mean Accuracy: {mean_accuracy}")
+
+        if mean_accuracy > best_accuracy:
+            best_accuracy = mean_accuracy
+            best_params = {
+                "lambda1": lambda1,
+                "lambda2": lambda2,
+                "dim": dim,
+                "mu": mu,
+                "rho": rho,
+            }
+            no_improvement_count = 0
+        else:
+            no_improvement_count += 1
+
+        if no_improvement_count >= early_stopping_rounds:
+            logger.info(
+                f"Early stopping triggered after {early_stopping_rounds} rounds with no improvement."
             )
-
-        for future, params in zip(as_completed(futures), param_list):
-            mean_accuracy = future.result()
-            lambda1, lambda2, dim, mu, rho = params
-            logger.info(f"Mean Accuracy: {mean_accuracy}")
-
-            if mean_accuracy > best_accuracy:
-                best_accuracy = mean_accuracy
-                best_params = {
-                    "lambda1": lambda1,
-                    "lambda2": lambda2,
-                    "dim": dim,
-                    "mu": mu,
-                    "rho": rho,
-                }
-                no_improvement_count = 0
-            else:
-                no_improvement_count += 1
-
-            if no_improvement_count >= early_stopping_rounds:
-                logger.info(
-                    f"Early stopping triggered after {early_stopping_rounds} rounds with no improvement."
-                )
-                break
+            break
 
     logger.info(f"Best accuracy: {best_accuracy}")
     logger.info(f"Best parameters: {best_params}")

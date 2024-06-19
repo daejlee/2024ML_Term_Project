@@ -15,14 +15,14 @@ class LDA:
         n_features = X.shape[1]
 
         mean_overall = np.mean(X, axis=0)
-        means = []
+        self.means_ = []
         Sw = np.zeros((n_features, n_features))
         Sb = np.zeros((n_features, n_features))
 
         for c in self.classes_:
             X_c = X[y == c]
             mean_c = np.mean(X_c, axis=0)
-            means.append(mean_c)
+            self.means_.append(mean_c)
             Sw += (X_c - mean_c).T @ (X_c - mean_c)
             n_c = X_c.shape[0]
             mean_diff = (mean_c - mean_overall).reshape(n_features, 1)
@@ -34,8 +34,8 @@ class LDA:
         eigvecs = eigvecs[:, idx]
         self.scalings_ = eigvecs[:, : n_classes - 1]
 
-        self.means_ = means
-        self.priors_ = [np.mean(y == c) for c in self.classes_]
+        self.means_ = np.array(self.means_)
+        self.priors_ = np.array([np.mean(y == c) for c in self.classes_])
 
         # Calculate intercept
         self.intercept_ = -0.5 * np.sum(self.means_ @ self.scalings_, axis=1)
@@ -47,6 +47,7 @@ class LDA:
         X_lda = self.transform(X)
         scores = [
             X_lda @ mean.T + intercept
-            for mean, intercept in zip(self.means_, self.intercept_)
+            for mean, intercept in zip(self.means_ @ self.scalings_, self.intercept_)
         ]
-        return self.classes_[np.argmax(scores, axis=0)]
+        scores = np.array(scores).T
+        return self.classes_[np.argmax(scores, axis=1)]

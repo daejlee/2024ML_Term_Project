@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 # 데이터 로드 및 전처리
-def load_and_preprocess_data(pizza_dir, not_pizza_dir, img_size=64, sele_num=15):
+def load_and_preprocess_data(pizza_dir, not_pizza_dir, img_size=32, sele_num=15):
     images = []
     labels = []
 
@@ -36,9 +36,4 @@ def load_and_preprocess_data(pizza_dir, not_pizza_dir, img_size=64, sele_num=15)
     scaler = StandardScaler()
     images = scaler.fit_transform(images)
 
-    # 학습 데이터와 테스트 데이터로 분리
-    X_train, X_test, y_train, y_test = train_test_split(
-        images, labels, test_size=0.2, random_state=42
-    )
-
-    return X_train, X_test, y_train, y_test
+    return images, labels

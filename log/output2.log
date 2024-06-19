@@ -1,0 +1,15 @@
+2024-06-20 02:28:09,660 - INFO - Testing with params: lambda1=1e-05, lambda2=0.01, dim=100, mu=1, rho=1.05
+2024-06-20 02:32:25,139 - INFO - Accuracy: 0.6472081218274112
+2024-06-20 02:32:25,139 - INFO - Testing with params: lambda1=0.001, lambda2=0.01, dim=50, mu=1, rho=1.05
+2024-06-20 02:36:27,378 - INFO - Accuracy: 0.6421319796954315
+2024-06-20 02:36:27,379 - INFO - Testing with params: lambda1=1e-05, lambda2=0.01, dim=100, mu=0.01, rho=1.01
+2024-06-20 02:40:17,820 - INFO - Accuracy: 0.6218274111675127
+2024-06-20 02:40:17,820 - INFO - Testing with params: lambda1=1e-05, lambda2=0.001, dim=100, mu=1, rho=1.01
+2024-06-20 02:44:23,542 - INFO - Accuracy: 0.649746192893401
+2024-06-20 02:44:23,542 - INFO - Testing with params: lambda1=0.0001, lambda2=0.01, dim=100, mu=0.1, rho=1.1
+2024-06-20 02:48:39,953 - INFO - Accuracy: 0.6218274111675127
+2024-06-20 02:48:39,953 - INFO - Testing with params: lambda1=1e-05, lambda2=0.001, dim=50, mu=0.01, rho=1.05
+2024-06-20 02:53:15,730 - INFO - Accuracy: 0.5736040609137056
+2024-06-20 02:53:15,731 - INFO - Testing with params: lambda1=0.0001, lambda2=0.01, dim=100, mu=0.01, rho=1.1
+2024-06-20 02:57:43,827 - INFO - Accuracy: 0.6192893401015228
+2024-06-20 02:57:43,827 - INFO - Testing with params: lambda1=1e-05, lambda2=0.001, dim=150, mu=0.01, rho=1.05

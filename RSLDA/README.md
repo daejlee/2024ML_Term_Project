@@ -12,5 +12,4 @@ pip install -r requirements.txt
 
 If any additional libraries are needed, please install them as well.
 
-Then, run `python main.py` from the root directory to execute the program. The outputs will be logged in the log directory.
-Note: The default settings take approximately 4 hours to complete (time may vary depending on the hardware environment).
+Then, run `python main.py` from the root directory to execute the program.

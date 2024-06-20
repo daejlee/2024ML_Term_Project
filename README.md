@@ -1,15 +1,16 @@
 # RSLDA
 
-This project aims to use concept of RSLDA to implement better version of LDA.
+This project aims to use the concept of RSLDA to implement an improved version of LDA.
 
 ## How to run
 
-First, run following command to install libraries.
+First, install the required libraries by running the following command:
 
 ```
 pip install -r requirements.txt
 ```
 
-If you need any other libraries, install those as well.
+If any additional libraries are needed, please install them as well.
 
-Then run `python main.py` in the root directory to execute, outputs will be logged in log directory.
+Then, run `python main.py` from the root directory to execute the program. The outputs will be logged in the log directory.
+Note: The default settings take approximately 4 hours to complete (time may vary depending on the hardware environment).

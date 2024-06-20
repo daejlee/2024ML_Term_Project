@@ -1,0 +1,25 @@
+2024-06-20 03:09:56,643 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=50, mu=1, rho=1.05
+2024-06-20 03:14:29,324 - INFO - Accuracy: 0.6522842639593909
+2024-06-20 03:14:29,325 - INFO - Testing with params: lambda1=0.0001, lambda2=0.01, dim=100, mu=0.01, rho=1.1
+2024-06-20 03:19:20,985 - INFO - Accuracy: 0.6243654822335025
+2024-06-20 03:19:20,985 - INFO - Testing with params: lambda1=0.001, lambda2=0.01, dim=50, mu=0.1, rho=1.05
+2024-06-20 03:23:48,364 - INFO - Accuracy: 0.6243654822335025
+2024-06-20 03:23:48,365 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=50, mu=0.1, rho=1.1
+2024-06-20 03:28:25,219 - INFO - Accuracy: 0.6548223350253807
+2024-06-20 03:28:25,219 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=150, mu=0.01, rho=1.1
+2024-06-20 03:33:09,369 - INFO - Accuracy: 0.5355329949238579
+2024-06-20 03:33:09,370 - INFO - Testing with params: lambda1=0.0001, lambda2=0.001, dim=150, mu=0.1, rho=1.05
+2024-06-20 03:37:41,416 - INFO - Accuracy: 0.6345177664974619
+2024-06-20 03:37:41,417 - INFO - Testing with params: lambda1=0.001, lambda2=0.01, dim=50, mu=0.1, rho=1.01
+2024-06-20 03:42:05,353 - INFO - Accuracy: 0.6091370558375635
+2024-06-20 03:42:05,353 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=150, mu=0.1, rho=1.1
+2024-06-20 03:46:51,588 - INFO - Accuracy: 0.6446700507614214
+2024-06-20 03:46:51,588 - INFO - Testing with params: lambda1=1e-05, lambda2=0.001, dim=50, mu=1, rho=1.01
+2024-06-20 03:51:11,754 - INFO - Accuracy: 0.6624365482233503
+2024-06-20 03:51:11,754 - INFO - Testing with params: lambda1=0.001, lambda2=0.0001, dim=150, mu=1, rho=1.01
+2024-06-20 03:55:52,396 - INFO - Accuracy: 0.6421319796954315
+2024-06-20 03:55:52,396 - INFO - Testing with params: lambda1=0.001, lambda2=0.01, dim=150, mu=0.1, rho=1.05
+2024-06-20 04:00:14,144 - INFO - Accuracy: 0.6345177664974619
+2024-06-20 04:00:14,144 - INFO - Testing with params: lambda1=0.001, lambda2=0.01, dim=50, mu=0.01, rho=1.1
+2024-06-20 04:04:32,570 - INFO - Accuracy: 0.6015228426395939
+2024-06-20 04:04:32,570 - INFO - Testing with params: lambda1=1e-05, lambda2=0.01, dim=100, mu=1, rho=1.01

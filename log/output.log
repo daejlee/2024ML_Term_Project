@@ -1,0 +1,17 @@
+2024-06-20 04:37:50,419 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=50, mu=0.01, rho=1.01
+2024-06-20 04:55:59,186 - INFO - Mean Accuracy: 0.5589994962607046
+2024-06-20 04:55:59,186 - INFO - Testing with params: lambda1=0.001, lambda2=0.0001, dim=50, mu=1, rho=1.05
+2024-06-20 05:12:32,165 - INFO - Mean Accuracy: 0.672442877255525
+2024-06-20 05:12:32,165 - INFO - Testing with params: lambda1=0.0001, lambda2=0.001, dim=50, mu=0.1, rho=1.01
+2024-06-20 05:28:59,152 - INFO - Mean Accuracy: 0.6129241420286485
+2024-06-20 05:28:59,153 - INFO - Testing with params: lambda1=0.0001, lambda2=0.01, dim=50, mu=0.1, rho=1.1
+2024-06-20 05:45:25,952 - INFO - Mean Accuracy: 0.6459978558788959
+2024-06-20 05:45:25,952 - INFO - Testing with params: lambda1=1e-05, lambda2=0.01, dim=150, mu=1, rho=1.1
+2024-06-20 06:03:03,994 - INFO - Mean Accuracy: 0.6576833158962039
+2024-06-20 06:03:03,995 - INFO - Testing with params: lambda1=1e-05, lambda2=0.0001, dim=100, mu=1, rho=1.05
+2024-06-20 06:19:59,874 - INFO - Mean Accuracy: 0.6683625889616513
+2024-06-20 06:19:59,874 - INFO - Testing with params: lambda1=0.001, lambda2=0.0001, dim=50, mu=0.01, rho=1.05
+2024-06-20 06:36:22,534 - INFO - Mean Accuracy: 0.5651102414073701
+2024-06-20 06:36:22,534 - INFO - Early stopping triggered after 5 rounds with no improvement.
+2024-06-20 06:36:22,534 - INFO - Best accuracy: 0.672442877255525
+2024-06-20 06:36:22,535 - INFO - Best parameters: {'lambda1': 0.001, 'lambda2': 0.0001, 'dim': 50, 'mu': 1, 'rho': 1.05}

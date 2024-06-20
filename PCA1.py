@@ -1,6 +1,5 @@
 from mySVD import mySVD
 import numpy as np
-from tqdm.auto import tqdm
 from scipy.sparse import issparse
 
 
